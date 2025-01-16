@@ -1,0 +1,189 @@
+/* Timeline Styling */
+.timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+  }
+  
+  .timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: #eeeeee;
+    left: 50%;
+    margin-left: -1.5px;
+  }
+  
+  .timeline > li {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .timeline > li:before,
+  .timeline > li:after {
+    content: " ";
+    display: table;
+  }
+  
+  .timeline > li:after {
+    clear: both;
+  }
+  
+  .timeline > li > .timeline-panel {
+    width: 46%;
+    float: left;
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+    padding: 20px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  }
+  
+  .timeline > li > .timeline-panel:before {
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    content: " ";
+  }
+  
+  .timeline > li > .timeline-panel:after {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    content: " ";
+  }
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 700px; /* Fixed height for all cards */
+}
+
+.card-image {
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.card-content {
+  flex-grow: 1;   /* Allow card content to take available space */
+  display: flex;
+  flex-direction: column;
+}
+
+.media {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0; /* Prevent media from shrinking */
+  margin-bottom: 0.5rem; /* Add margin-bottom to create space for title/affiliation */
+}
+
+/* Ensure consistent spacing around title and subtitle */
+.media-content {
+  margin-bottom: 1rem; /* Space between name/title and "Talk Title" */
+}
+
+.media-content > * {
+  margin-bottom: 0.5rem;
+}
+
+.media-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.media-content .title {
+  min-height: 3em; /* Adjust as needed for up to 2 lines of text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-content .subtitle {
+  min-height: 1.2em; /* Adjust as needed for up to 2 lines of text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.talk-title {
+  margin-bottom: 0.5rem;
+  min-height: 2.8em; /* Adjust as needed for up to 3 lines of text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollable-bio {
+  height: 2in;    /* Fixed height for bio */
+  overflow-y: scroll;  /* Always show scrollbar */
+  
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) { 
+  .column.is-one-quarter {
+      width: 100%; /* Make columns full width on mobile */
+      flex-basis: 100%; /* Ensure they take up full width */
+  }
+
+  .card-content .content {
+      font-size: 0.9rem; /* Slightly reduce font size if needed */
+  }
+
+  .card-content .title.is-6 {
+      font-size: 1.1rem; /* Adjust font size for title on mobile */
+      line-height: 1.2;  /* Reduce line height for title */
+      margin-bottom: 0.5rem; /* Reduce bottom margin */
+  }
+
+  .card-content .subtitle.is-7 {
+      font-size: 0.8rem; /* Adjust font size for subtitle on mobile */
+      line-height: 1.1;  /* Reduce line height for subtitle */
+  }
+  .scrollable-bio{
+      height: auto;
+  }
+  .card{
+      height: auto;
+  }
+
+  /* Remove padding and margin from media-content on mobile */
+  .media-content {
+      padding: 0;
+      margin: 0;
+  }
+
+  /* Allow title and subtitle to wrap */
+  .media-content .title,
+  .media-content .subtitle {
+      white-space: normal; 
+  }
+
+  .media-content {
+      display: flex;
+      flex-direction: column; /* Stack title and subtitle vertically */
+      justify-content: center; /* Center vertically within media-content */
+      align-items: center;     /* Center horizontally */
+      text-align: center;   /* Center text within the title/subtitle */
+  }
+}

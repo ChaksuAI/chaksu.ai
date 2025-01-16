@@ -9,7 +9,8 @@ $(document).ready(function() {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: false,
-    threshold: 10
+    threshold: 10,
+    navigation: true, // Enable built-in navigation
   };
   var imageCarousel = bulmaCarousel.attach('#image-carousel', imageCarouselOptions);
 
@@ -20,42 +21,32 @@ $(document).ready(function() {
     infinite: true,
     autoplay: false,
     pauseOnHover: false,
-    threshold: 10
+    threshold: 10,
+    navigation: true, // Enable built-in navigation
   };
   var videoCarousel = bulmaCarousel.attach('#video-carousel', videoCarouselOptions);
 
-  // Hide non-active items after each transition
+  // Hide non-active items after each transition and on initialization
   function hideNonActiveItems(carouselInstance) {
     carouselInstance.items().each(function(index) {
       if (index !== carouselInstance.index()) {
-        $(this).css({
-          'visibility': 'hidden',
-          'z-index': '0',
-          'width': '0'
-        });
+        $(this).addClass('is-hidden');
       } else {
-        $(this).css({
-          'visibility': 'visible',
-          'z-index': '1',
-          'width': '100%'
-        });
+        $(this).removeClass('is-hidden');
       }
     });
   }
 
+  // Attach afterMove event to re-hide non-active items
   imageCarousel.on('afterMove.carousel', function(instance) {
     hideNonActiveItems(instance);
-    $(window).trigger('resize'); // Force layout recalculation
   });
 
   videoCarousel.on('afterMove.carousel', function(instance) {
     hideNonActiveItems(instance);
-    $(window).trigger('resize'); // Force layout recalculation
   });
 
   // Initial hiding of non-active items
   hideNonActiveItems(imageCarousel);
   hideNonActiveItems(videoCarousel);
-
-  bulmaSlider.attach();
 });

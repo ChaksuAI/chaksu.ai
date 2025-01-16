@@ -1,84 +1,87 @@
 /* Timeline Styling */
 .timeline {
-    list-style: none;
-    padding: 20px 0 20px;
-    position: relative;
-  }
-  
-  .timeline:before {
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    content: " ";
-    width: 3px;
-    background-color: #eeeeee;
-    left: 50%;
-    margin-left: -1.5px;
-  }
-  
-  .timeline > li {
-    margin-bottom: 20px;
-    position: relative;
-  }
-  
-  .timeline > li:before,
-  .timeline > li:after {
-    content: " ";
-    display: table;
-  }
-  
-  .timeline > li:after {
-    clear: both;
-  }
-  
-  .timeline > li > .timeline-panel {
-    width: 46%;
-    float: left;
-    border: 1px solid #d4d4d4;
-    border-radius: 2px;
-    padding: 20px;
-    position: relative;
-    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-  }
-  
-  .timeline > li > .timeline-panel:before {
-    position: absolute;
-    top: 26px;
-    right: -15px;
-    display: inline-block;
-    border-top: 15px solid transparent;
-    border-left: 15px solid #ccc;
-    border-right: 0 solid #ccc;
-    border-bottom: 15px solid transparent;
-    content: " ";
-  }
-  
-  .timeline > li > .timeline-panel:after {
-    position: absolute;
-    top: 27px;
-    right: -14px;
-    display: inline-block;
-    border-top: 14px solid transparent;
-    border-left: 14px solid #fff;
-    border-right: 0 solid #fff;
-    border-bottom: 14px solid transparent;
-    content: " ";
-  }
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li > .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
 
 
 .card {
   display: flex;
   flex-direction: column;
-  height: 700px; /* Fixed height for all cards */
+  height: 700px;
+  /* Fixed height for all cards */
 }
 
 .card-image {
-  flex-shrink: 0; /* Prevent the image from shrinking */
+  flex-shrink: 0;
+  /* Prevent the image from shrinking */
 }
 
 .card-content {
-  flex-grow: 1;   /* Allow card content to take available space */
+  flex-grow: 1;
+  /* Allow card content to take available space */
   display: flex;
   flex-direction: column;
 }
@@ -87,13 +90,16 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  flex-shrink: 0; /* Prevent media from shrinking */
-  margin-bottom: 0.5rem; /* Add margin-bottom to create space for title/affiliation */
+  flex-shrink: 0;
+  /* Prevent media from shrinking */
+  margin-bottom: 0.5rem;
+  /* Add margin-bottom to create space for title/affiliation */
 }
 
 /* Ensure consistent spacing around title and subtitle */
 .media-content {
-  margin-bottom: 1rem; /* Space between name/title and "Talk Title" */
+  margin-bottom: 1rem;
+  /* Space between name/title and "Talk Title" */
 }
 
 .media-content > * {
@@ -105,14 +111,16 @@
 }
 
 .media-content .title {
-  min-height: 3em; /* Adjust as needed for up to 2 lines of text */
+  min-height: 3em;
+  /* Adjust as needed for up to 2 lines of text */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .media-content .subtitle {
-  min-height: 1.2em; /* Adjust as needed for up to 2 lines of text */
+  min-height: 1.2em;
+  /* Adjust as needed for up to 2 lines of text */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,43 +135,56 @@
 
 .talk-title {
   margin-bottom: 0.5rem;
-  min-height: 2.8em; /* Adjust as needed for up to 3 lines of text */
+  min-height: 2.8em;
+  /* Adjust as needed for up to 3 lines of text */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .scrollable-bio {
-  height: 2in;    /* Fixed height for bio */
-  overflow-y: scroll;  /* Always show scrollbar */
-  
+  height: 2in;
+  /* Fixed height for bio */
+  overflow-y: scroll;
+  /* Always show scrollbar */
+
 }
 
 /* Media Query for Mobile Devices */
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 768px) {
   .column.is-one-quarter {
-      width: 100%; /* Make columns full width on mobile */
-      flex-basis: 100%; /* Ensure they take up full width */
+      width: 100%;
+      /* Make columns full width on mobile */
+      flex-basis: 100%;
+      /* Ensure they take up full width */
   }
 
   .card-content .content {
-      font-size: 0.9rem; /* Slightly reduce font size if needed */
+      font-size: 0.9rem;
+      /* Slightly reduce font size if needed */
   }
 
   .card-content .title.is-6 {
-      font-size: 1.1rem; /* Adjust font size for title on mobile */
-      line-height: 1.2;  /* Reduce line height for title */
-      margin-bottom: 0.5rem; /* Reduce bottom margin */
+      font-size: 1.1rem;
+      /* Adjust font size for title on mobile */
+      line-height: 1.2;
+      /* Reduce line height for title */
+      margin-bottom: 0.5rem;
+      /* Reduce bottom margin */
   }
 
   .card-content .subtitle.is-7 {
-      font-size: 0.8rem; /* Adjust font size for subtitle on mobile */
-      line-height: 1.1;  /* Reduce line height for subtitle */
+      font-size: 0.8rem;
+      /* Adjust font size for subtitle on mobile */
+      line-height: 1.1;
+      /* Reduce line height for subtitle */
   }
-  .scrollable-bio{
+
+  .scrollable-bio {
       height: auto;
   }
-  .card{
+
+  .card {
       height: auto;
   }
 
@@ -176,14 +197,108 @@
   /* Allow title and subtitle to wrap */
   .media-content .title,
   .media-content .subtitle {
-      white-space: normal; 
+      white-space: normal;
   }
 
   .media-content {
       display: flex;
-      flex-direction: column; /* Stack title and subtitle vertically */
-      justify-content: center; /* Center vertically within media-content */
-      align-items: center;     /* Center horizontally */
-      text-align: center;   /* Center text within the title/subtitle */
+      flex-direction: column;
+      /* Stack title and subtitle vertically */
+      justify-content: center;
+      /* Center vertically within media-content */
+      align-items: center;
+      /* Center horizontally */
+      text-align: center;
+      /* Center text within the title/subtitle */
   }
+}
+
+
+/* Carousel Styles */
+.carousel-section {
+  padding: 20px 0;
+  /* Add some padding around carousels */
+}
+
+.carousel-section .title {
+  text-align: center;
+  /* Center carousel titles */
+  margin-bottom: 20px;
+  /* Add space between title and carousel */
+}
+
+/* Force single item display */
+.image-carousel,
+.video-carousel {
+  width: 60%;
+  /* Adjust width as needed */
+  margin: 0 auto;
+  /* Center the carousel */
+  overflow: hidden;
+  /* Hide anything outside the carousel */
+}
+
+/* Image carousel item */
+.image-carousel .item {
+  display: flex;
+  /* Use flexbox */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  width: 100%;
+  /* Each item takes full width */
+  margin: 0;
+  padding: 0;
+}
+
+.video-carousel .item {
+  display: flex;
+  /* Use flexbox */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  width: 100%;
+  /* Each item takes full width */
+  margin: 0;
+  padding: 0;
+}
+
+.image-carousel .item img {
+  width: auto;
+  /* Maintain aspect ratio */
+  max-width: 100%;
+  /* Fit within the carousel width */
+  max-height: 400px;
+  /* Limit height to prevent layout issues */
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+}
+
+/* Video carousel item */
+.video-carousel .item {
+  width: 100%;
+  /* Each item takes full width */
+  text-align: center;
+  /* Center videos */
+}
+
+.video-carousel .item video {
+  width: 100%;
+  /* Make image fit the item's width */
+  height: auto;
+  /* Maintain aspect ratio */
+  display: block;
+  /* Prevents spacing issues below the image */
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+}
+
+/* Add a safety margin during transitions */
+.image-carousel .item.is-active,
+.video-carousel .item.is-active {
+  margin-right: -5%; /* Adjust this value as needed */
+  margin-left: -5%;
+  width: 110%;
 }

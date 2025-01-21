@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Image Gallery - Symposium on Artificial Intelligence for Eyecare">
+  <title>Image Gallery - Symposium on AI for Eyecare</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body" style="padding-top: 1rem; padding-bottom: 1rem;">
+      <div class="columns is-centered">
+        <figure class="image">
+          <img src="static/images/ai_for_eyecare/banner.png" alt="Symposium Banner" style="width: 800px; height: auto;">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Symposium on <br>Artificial Intelligence for Eyecare</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <b>Organized by:</b> ChákṣuAI Team at Spectrum Lab (EE, IISc),<br>
+                Prof. Chandra Sekhar Seelamantula (EE, IISc), Prof. Gaurav Sharma (U. Rochester, USA),<br> Prof. Prabhdeep Kaur (Isaac Center for Public Health, IISc), Dr. Uma Nambiar (CEO, IISc Medical School Foundation), and Prof. Harish Kumar JR (BITS, Bengaluru).
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><br><b>Supported by:</b> SPARC, Ministry of Education, Govt. of India and Kotak IISc AI-ML Centre.</span>
+            </div>
+            <br>
+            <br>
+
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="/" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-home"></i>
+                  </span>
+                  <span>Home</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="/ai_for_eyecare.html" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-home"></i>
+                  </span>
+                  <span>Workshop Main Page</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+        <h2 class="title is-3 has-text-centered">Event Gallery</h2>
+        <div class="columns is-multiline" id="event-gallery">
+        </div>
+    </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const galleryContainer = document.getElementById('event-gallery');
+    for (let i = 2; i <= 33; i++) {
+      const column = document.createElement('div');
+      column.className = 'column is-one-quarter';
+      column.innerHTML = `
+        <a href="static/images/ai_for_eyecare/event_gallery/ai_for_eyecare_${i}.jpg" data-lightbox="event-gallery" data-title="Event Photo ${i}">
+          <figure class="image">
+            <img src="static/images/ai_for_eyecare/event_gallery/ai_for_eyecare_${i}.jpg" alt="Event Photo ${i}">
+          </figure>
+        </a>
+      `;
+      galleryContainer.appendChild(column);
+    }
+  });
+</script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              &copy; 2025 Spectrum Lab, EE Department, IISc Bengaluru. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
